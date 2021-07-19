@@ -18,7 +18,7 @@ Don't worry if it isn't immediately clear how to solve them, work through differ
 
 When first considering how to write a recursive function first consider:
   * What is the base case, that is _what is the condition that stop to recursion_
-  * What is the recursive logic, _ie what is the chunk of code that needs to run each time the function recurses_
+  * What is the recursive case(logic), _ie what is the chunk of code that needs to run each time the function recurses_
 
 ---
 

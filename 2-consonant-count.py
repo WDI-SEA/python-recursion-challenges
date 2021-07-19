@@ -14,7 +14,6 @@ Output : 8
 '''
 
 def count_cosonants(string: str, num: int = 0) -> int:
-
   # base case -- all letters have been sliced off
   if len(string) == 0:
     return num
@@ -30,7 +29,5 @@ def count_cosonants(string: str, num: int = 0) -> int:
   # recursively invoke
   return count_cosonants(string, num)
 
-
 print('it should be 4:', count_cosonants('snakes'))
 print('it should be 8:', count_cosonants('SpamAndEggs'))
-
