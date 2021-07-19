@@ -36,20 +36,3 @@ d: 4
 o1 = {"a": 1, "b": 2}
 o2 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero"}, "d": 4}
 o3 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero", "friends": {"spiderman": {"name": "Peter Parker"}, "superman": {"name": "Clark Kent"}}}, "d": 4}
-
-def pretty_print(dictionary, indent="  "):
-  # iterate through every key in the dictionary
-  for key in dictionary:
-    # get the value associated with the key
-    val = dictionary[key]
-    # check the type of the key to see if it's another dict
-    if isinstance(val, dict):
-      print(f"{indent}{key}:")
-      pretty_print(dictionary[key], indent + indent)
-    else:
-      # it's the val isn't a dict then just print out they key and val
-      print(f"{indent}{key}: {val}")
-
-pretty_print(o1)
-pretty_print(o2)
-pretty_print(o3)

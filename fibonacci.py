@@ -18,17 +18,3 @@ output: 2
 input: 30
 output: 832040
 '''
-
-def fib(n):
-  # case where number is 0
-  if n < 0:
-    return 0
-  # case where number is the first fibanaccis
-  if n == 1 or n == 2:
-    return 1
-  else:
-    return fib(n - 1) + fib(n - 2)
-
-print("it should return 55:", fib(10))
-print("it should return 2:", fib(3))
-print("it shoucld return 832040:", fib(30))
