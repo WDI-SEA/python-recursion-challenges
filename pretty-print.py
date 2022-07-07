@@ -36,3 +36,30 @@ d: 4
 o1 = {"a": 1, "b": 2}
 o2 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero"}, "d": 4}
 o3 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero", "friends": {"spiderman": {"name": "Peter Parker"}, "superman": {"name": "Clark Kent"}}}, "d": 4}
+
+def pretty_print(dictionary, indent):
+  for key, value in dictionary.items():
+    if isinstance(value, (str, int)):
+      print(indent, key, ":", value)
+    else:
+      print(indent, key, ":") 
+      pretty_print(value, indent + "  ")
+
+(pretty_print(o3, ""))
+
+
+## ALTERNATE SOLUTION
+
+def pretty_print(dictionary, indent):
+  for key, value in dictionary.items() :
+    if (isinstance(value, dict)):
+      print(f'{indent}{key}:')
+      pretty_print(value, indent + "  ")
+      
+    else: 
+      
+      print(f'{indent}{key}: {value}')
+
+
+
+pretty_print(o3, "")

@@ -15,3 +15,12 @@ output: "zyxwvutsrqponmlkjihgfedcba"
 input: reverse("computer")
 output: "computer"
 '''
+
+def str_reverse(s):
+    str = ""
+    for letter in s:
+        str = letter + str
+    return str
+
+s = 'Hello World'
+print(str_reverse(s))
