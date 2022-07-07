@@ -12,3 +12,28 @@ Output: 4
 Input: 'SpamAndEggs'
 Output: 8
 '''
+
+def consonant_count(str):
+    cons = 0
+    vowels = ['a', 'e', 'i', 'o', 'u']
+    for char  in str:
+        if(char not in vowels):
+            cons += 1
+        else: 
+            cons = cons
+    return cons
+
+print(consonant_count('airplane'))
+
+##ALTERNATE SOLUTION
+
+def const_count(str):
+  vowel = 'aeiou'
+  if str == '':
+    return 0
+  if str[0].casefold() not in vowel:
+    return 1 + const_count(str[1:])
+  else:
+    return const_count(str[1:])
+
+print(const_count('SpamAndEggs'))
