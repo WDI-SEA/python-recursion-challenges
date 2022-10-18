@@ -11,7 +11,4 @@ output: "ba"
 
 input: "abcdefghijklmnopqrstuvwxyz"
 output: "zyxwvutsrqponmlkjihgfedcba"
-
-input: reverse("computer")
-output: "computer"
 '''
