@@ -35,4 +35,33 @@ d: 4
 # use these for testing
 o1 = {"a": 1, "b": 2}
 o2 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero"}, "d": 4}
-o3 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero", "friends": {"spiderman": {"name": "Peter Parker"}, "superman": {"name": "Clark Kent"}}}, "d": 4}
+o3 = {
+    "a": 1,
+    "b": 2,
+    "c": {
+        "name": "Bruce Wayne",
+        "occupation": "Hero",
+        "friends": {
+            "spiderman": {
+                "name": "Peter Parker"
+            },
+            "superman": {
+                "name": "Clark Kent"
+            }
+        }
+    },
+    "d": 4
+}
+
+# 20,596,783,805 digits.
+def pretty_print(dictionary, indendation = ""):
+    # iterate over whole dictionary
+    for key in dictionary:
+      value = dictionary[key]
+      if isinstance(value, dict):
+         print(f"{indendation}{key}: ")
+         pretty_print(value, indendation + "    ")
+      else:
+         print(f"{indendation}{key}: {value}")
+
+pretty_print(o3)
