@@ -18,3 +18,12 @@ output: 2
 input: 30
 output: 832040
 '''
+
+def fibbonacci(n):
+    #base case is n == 1 or2
+    if n == 1 or n == 2:
+        return 1
+    else:
+        return fibbonacci(n - 1) + fibbonacci(n - 2)
+    
+print(fibbonacci(30))

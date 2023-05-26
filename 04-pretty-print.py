@@ -36,3 +36,25 @@ d: 4
 o1 = {"a": 1, "b": 2}
 o2 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero"}, "d": 4}
 o3 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero", "friends": {"spiderman": {"name": "Peter Parker"}, "superman": {"name": "Clark Kent"}}}, "d": 4}
+
+
+# def pretty_print(dictionary, indent):
+#     for key, value in dictionary.items():
+#         if type(dictionary[key]) == type({}):
+#             print(f"{indent}{key}:{f"pretty_print(dictionary[key], + "  ")}")
+#         else:
+#             print(f"{indent}{key}: {dictionary[key]}")
+
+# pretty_print(o2, "")
+
+def pretty_print(dictionary, indentation = ""):
+    #iterate over whole dictionary
+    for key in dictionary:
+        value = dictionary[key]
+        if indentation(value, dict):
+            print(f"{indentation}{key}:")
+            pretty_print(value, indentation + "    ")
+        else:
+            print(f"{indentation}{key}:{value}")
+
+pretty_print(o3)
